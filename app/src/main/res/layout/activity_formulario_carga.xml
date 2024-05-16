@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_background"
+    tools:context=".FormularioMain">
+
+
+    <TextView
+        android:id="@+id/DatosMercancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="datos de la mercancia"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/titulo"
+        android:layout_width="345dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="inidica el titulo de tu solicitud"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DatosMercancia"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <EditText
+        android:id="@+id/tipoMercancia"
+        android:layout_width="345dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="que tipo de mercancia maneja"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/dimenciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="dimeciones de la carga"
+
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tipoMercancia" />
+
+    <EditText
+        android:id="@+id/largo"
+        android:layout_width="242dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:hint="digite el largo de la carga (m)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dimenciones" />
+
+    <EditText
+        android:id="@+id/ancho"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:hint="digite el ancho de carga (m)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/largo" />
+
+    <EditText
+        android:id="@+id/alto"
+        android:layout_width="243dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+
+        android:hint="digite la altura de la carga (m)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ancho" />
+
+
+    <EditText
+        android:id="@+id/peso"
+        android:layout_width="242dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+
+        android:hint="digite el peso de la carga (kg)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alto" />
+
+    <EditText
+        android:id="@+id/detAdd"
+        android:layout_width="362dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="16dp"
+
+        android:hint="detalles adicionales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peso" />
+
+    <Button
+        android:id="@+id/BtnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="VolverAInicio"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detAdd"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

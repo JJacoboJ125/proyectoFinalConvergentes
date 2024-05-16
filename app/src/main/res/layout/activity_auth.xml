@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:padding="19dp"
+    tools:context=".AuthActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="168dp"
+            android:layout_height="168dp"
+            android:src="@drawable/icon_account_circle"
+            />
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Username"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/round_corner"
+            android:padding="18dp"
+            android:inputType="text"
+            android:id="@+id/username"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="password"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/round_corner"
+            android:padding="16dp"
+            android:inputType="textPassword"
+            android:id="@+id/password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entra"
+            android:textColor="@color/white"
+            android:layout_marginTop="32dp"
+            android:padding="18dp"
+            android:textSize="20sp"
+            android:background="@drawable/round_corner"
+            android:id="@+id/login_btn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="registrate"
+            android:textColor="@color/white"
+            android:layout_marginTop="32dp"
+            android:padding="18dp"
+            android:textSize="20sp"
+            android:background="@drawable/round_corner"
+            android:id="@+id/reallogin_btn"/>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

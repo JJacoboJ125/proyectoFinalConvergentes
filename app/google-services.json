@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "370993154897",
+    "project_id": "convergentesapptrans",
+    "storage_bucket": "convergentesapptrans.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370993154897:android:e86737a92dfbdf4a172170",
+        "android_client_info": {
+          "package_name": "com.example.lego"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-RlVE6JcrxjGXWCF3ydnlehAhyqsv0oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

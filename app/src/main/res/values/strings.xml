@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Lego</string>
+    <string-array name="tipoUsuario">
+        <item>dueño de carga</item>
+        <item>dueño de vehiculo</item>
+        <item>conductor del vehiculo</item>
+    </string-array>
+    <string name="title_activity_home_dvactivity">HomeDVActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Mis solicitudes</string>
+    <string name="menu_gallery">mi perfil</string>
+    <string name="menu_slideshow">salir</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
