@@ -24,7 +24,7 @@ public class HomeViewModelC extends ViewModel {
     CollectionReference collectionRef = db.collection("cargas");
 
     public HomeViewModelC() {
-        collectionRef.whereEqualTo("active", true ).whereEqualTo("aceptada", false).get().addOnSuccessListener(queryDocumentSnapshots -> {
+        collectionRef.whereEqualTo("active", true ).whereEqualTo("conductor", uidd).whereEqualTo("aceptada",true).get().addOnSuccessListener(queryDocumentSnapshots -> {
             List<String> dataListTitulo = new ArrayList<>();
             List<String> dataListId = new ArrayList<>();
             for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
@@ -36,7 +36,7 @@ public class HomeViewModelC extends ViewModel {
                 mDataId.setValue(dataListId);
             } else {
                 List<String> emptyList = new ArrayList<>();
-                emptyList.add("No has realizado ninguna solicitud de carga");
+                emptyList.add("No has realizado ninguna solicitud de carga hola");
                 mDataT.setValue(emptyList);
             }
         }).addOnFailureListener(e -> {

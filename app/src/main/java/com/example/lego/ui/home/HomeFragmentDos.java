@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.lego.ConfirmDetalleCargas;
 import com.example.lego.databinding.FragmentHomeBinding;
+import com.example.lego.databinding.FragmentHomeDosBinding;
 import com.example.lego.detalleCargaDC;
 
 import java.util.ArrayList;
@@ -22,12 +23,13 @@ import java.util.List;
 
 public class HomeFragmentDos extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentHomeDosBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         HomeViewModelDos homeViewModelDos = new ViewModelProvider(this).get(HomeViewModelDos.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+
+        binding = FragmentHomeDosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final ListView listView = binding.listaCargas;

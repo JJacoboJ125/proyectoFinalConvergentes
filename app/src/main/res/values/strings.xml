@@ -24,4 +24,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_dvehiculo">DVehiculo</string>
     <string name="title_activity_home_conductor">homeConductor</string>
+    <string name="question">Mensaje 1</string>
+    <string name="response">Mensaje 2</string>
 </resources>

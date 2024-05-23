@@ -63,8 +63,10 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                             RefDB.child(idUsuario).setValue(tipoUs.selectedItemId.toString())
 
                         }
+                        var tipo: Int
+                        tipo = tipoUs.selectedItemId.toInt()
                         if (idUsuario != null) {
-                            showHome(TipoUs,idUsuario)
+                            showHome(tipo,idUsuario)
                         }
 
                     } else {

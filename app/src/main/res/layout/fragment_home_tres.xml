@@ -24,6 +24,8 @@
     <ListView
         android:id="@+id/listaCargas"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-358dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
