@@ -13,6 +13,17 @@
         android:theme="@style/Theme.Lego"
         tools:targetApi="31">
         <activity
+            android:name=".homeConductor"
+            android:exported="false"
+            android:label="@string/title_activity_home_conductor"
+            android:theme="@style/Theme.Lego.NoActionBar" />
+        <activity
+            android:name=".GoogleMaps"
+            android:exported="false" />
+        <activity
+            android:name=".addVehiculo"
+            android:exported="false" />
+        <activity
             android:name=".DVehiculo"
             android:exported="false"
             android:label="@string/title_activity_dvehiculo"

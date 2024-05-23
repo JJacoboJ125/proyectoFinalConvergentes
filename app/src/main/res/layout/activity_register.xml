@@ -51,7 +51,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/usernameR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -64,7 +64,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/passwordR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -77,7 +77,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/ConfirmPassword"
+                android:id="@+id/ConfirmPasswordR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

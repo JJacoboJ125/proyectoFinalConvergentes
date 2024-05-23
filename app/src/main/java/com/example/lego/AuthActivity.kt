@@ -102,7 +102,12 @@ class AuthActivity : AppCompatActivity() {
                 uid.getInstance().setUid(uidd)
                 val homeIntent = Intent(this, DVehiculo::class.java)
                 startActivity(homeIntent)
-            }
+            }else
+        if(TipoUsuario == 2){
+            uid.getInstance().setUid(uidd)
+            val homeIntent = Intent(this, homeConductor::class.java)
+            startActivity(homeIntent)
+        }
 
     }
 

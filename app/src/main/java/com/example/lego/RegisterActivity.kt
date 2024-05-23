@@ -34,8 +34,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_register)
 
         auth = Firebase.auth
-        username = findViewById(R.id.username)
-        password = findViewById(R.id.password)
+        username = findViewById(R.id.usernameR)
+        password = findViewById(R.id.passwordR)
         edad = findViewById(R.id.fechaNaci)
         edad.setOnClickListener(this)
         reallogin_btn = findViewById(R.id.reallogin_btn)
@@ -56,13 +56,16 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                     if(it.isSuccessful){
                         //showHome(it.result?.user?.email ?: "Nobrother")
                         val idUsuario= FirebaseAuth.getInstance().currentUser?.uid
+
                         val RefDB = FirebaseDatabase.getInstance().getReference("usuarios")
 
                         if (idUsuario != null) {
                             RefDB.child(idUsuario).setValue(tipoUs.selectedItemId.toString())
 
                         }
-                        showHome()
+                        if (idUsuario != null) {
+                            showHome(TipoUs,idUsuario)
+                        }
 
                     } else {
                         showAlertCreate()
@@ -90,13 +93,28 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
-    private fun showHome(){
+    private fun showHome(TipoUsuario:Int,uidd:String){
         //val homeIntent = Intent(this, HomeActivity::class.java).apply {
         //putExtra("usuario",usuario)
         //}
+        if(TipoUsuario == 0){
+            uid.getInstance().setUid(uidd)
 
-        val homeIntent = Intent(this, HomeActivity::class.java)
-        startActivity(homeIntent)
+            val homeIntent = Intent(this, HomeDCActivity::class.java)
+            startActivity(homeIntent)
+        }else
+            if(TipoUsuario == 1){
+                uid.getInstance().setUid(uidd)
+                val homeIntent = Intent(this, DVehiculo::class.java)
+                startActivity(homeIntent)
+            }else
+                if(TipoUsuario == 2){
+                    uid.getInstance().setUid(uidd)
+                    val homeIntent = Intent(this, homeConductor::class.java)
+                    startActivity(homeIntent)
+                }
+
+    }
 
     }
 
@@ -115,5 +133,4 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         }
 
 
-    }
     }

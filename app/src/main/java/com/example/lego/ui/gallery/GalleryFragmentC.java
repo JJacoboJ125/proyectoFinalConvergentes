@@ -13,9 +13,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.lego.addVehiculo;
 import com.example.lego.databinding.FragmentGalleryBinding;
-import com.example.lego.detalleCargaDC;
 
-public class GalleryFragmentDos extends Fragment {
+public class GalleryFragmentC extends Fragment {
 
 private FragmentGalleryBinding binding;
 

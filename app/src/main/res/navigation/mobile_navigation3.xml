@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation3"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.lego.ui.home.HomeFragment"
+        android:label="ver tus viajes en proceso "
+        tools:layout="@layout/viajesactivosc" />
+
+    <fragment
+        android:id="@+id/nav_galleryC"
+        android:name="com.example.lego.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/historialc" />
+
+    <fragment
+        android:id="@+id/nav_slideshowC"
+        android:name="com.example.lego.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/exitc" />
+</navigation>

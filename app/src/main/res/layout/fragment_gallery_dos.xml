@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gallery.GalleryFragment" >
+    tools:context=".ui.gallery.GalleryFragmentDos" >
 
     <TextView
         android:id="@+id/text_gallery"
@@ -20,4 +20,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/verV"
+        android:layout_width="104dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="204dp" />
+
+    <Button
+        android:id="@+id/añadirV"
+        android:layout_width="104dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="204dp"
+        android:onClick="addVehiculo"/>
+
+    <TextView
+        android:id="@+id/AñadirVehiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="añadir vehiculos"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <TextView
+        android:id="@+id/vehiculosDisponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ver vehiculos"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="118dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
