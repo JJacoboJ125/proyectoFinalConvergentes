@@ -225,7 +225,8 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback 
                     if (!direccionOrigen.isEmpty() && !direccionDestino.isEmpty()) {
                         String dirOr = String.join(", ", direccionOrigen);
                         String dirDes = String.join(", ", direccionDestino);
-
+                        direccionDestino.clear();
+                        direccionOrigen.clear();
                         Uri gmmIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&origin=" + Uri.encode(dirOr) + "&destination=" + Uri.encode(dirDes));
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
@@ -286,11 +287,13 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback 
                     if (!direccionOrigen.isEmpty()) {
                         String dirOr = String.join(", ", direccionOrigen);
                         String encodedDirOr = "";
+
                         try {
                             encodedDirOr = URLEncoder.encode(dirOr, "UTF-8");
                         } catch (UnsupportedEncodingException e) {
                             throw new RuntimeException(e);
                         }
+                        direccionOrigen.clear();
                         Uri gmmIntentUri = Uri.parse("google.navigation:q="+encodedDirOr);
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
