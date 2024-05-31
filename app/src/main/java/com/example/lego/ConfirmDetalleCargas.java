@@ -2,8 +2,12 @@ package com.example.lego;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -18,7 +22,6 @@ public class ConfirmDetalleCargas extends AppCompatActivity {
     private TextView departo;
     private TextView direcciono;
     private TextView hora_fechao;
-
     private TextView ciudadd;
     private TextView departd;
     private TextView direcciond;
@@ -54,6 +57,8 @@ public class ConfirmDetalleCargas extends AppCompatActivity {
         titulo = findViewById(R.id.tituloC);
         descrip = findViewById(R.id.descripcion);
         tipo_merca = findViewById(R.id.tipoMerca);
+
+        Button  aceptar = findViewById(R.id.acepta);
 
         String documentId = getIntent().getStringExtra("DOCUMENT_ID");
         // Get the document data
@@ -91,7 +96,7 @@ public class ConfirmDetalleCargas extends AppCompatActivity {
                 ancho.append(anchoCarga);
                 largo.append(largoCarga);
                 peso.append(pesoCarga);
-                titulo.append(tituloCarga);
+                titulo.setText(tituloCarga);
                 descrip.append(descripcionCarga);
                 tipo_merca.append(tipoMercancia);
             } else {
@@ -102,7 +107,17 @@ public class ConfirmDetalleCargas extends AppCompatActivity {
             // Handle the error
             titulo.setText("Error al obtener los datos: " + e.getMessage());
         });
-    }
+        aceptar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+        Intent intent = new Intent(ConfirmDetalleCargas.this, selectVehiculo.class);
+                intent.putExtra("DOCUMENT_ID",documentId);
+                startActivity(intent);
+            }
+    });
+
+}
 
 
 }

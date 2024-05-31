@@ -48,8 +48,6 @@ class AuthActivity : AppCompatActivity() {
                val passwordIn = password.text.toString()
                FirebaseAuth.getInstance().signInWithEmailAndPassword(usernameIn, passwordIn).addOnCompleteListener{
                    if(it.isSuccessful){
-                       //showHome(it.result?.user?.email ?: "Nobrother")
-                           var TipoUs:Int=3
                            var uid=FirebaseAuth.getInstance().currentUser?.uid
                             val db = FirebaseDatabase.getInstance().getReference("usuarios")
                            if (uid != null) {
@@ -59,7 +57,6 @@ class AuthActivity : AppCompatActivity() {
                                        val tipoUsSnapshot = snapshot.getValue(String::class.java)
                                        val tipoUs = tipoUsSnapshot?.toIntOrNull() ?: 0
                                        ?: 3 // Valor por defecto si no se obtiene ningún valor de la base de datos
-
                                        showHome(tipoUs,uid)
                                    }
 
@@ -94,7 +91,6 @@ class AuthActivity : AppCompatActivity() {
         //}
         if(TipoUsuario == 0){
             uid.getInstance().setUid(uidd)
-
             val homeIntent = Intent(this, HomeDCActivity::class.java)
             startActivity(homeIntent)
         }else

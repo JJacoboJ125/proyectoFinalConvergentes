@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="ciudad:"
+                android:text="ciudad: "
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="30dp"
-                android:text="destino de la carga"
+                android:text="destino de la carga: "
                 android:textAlignment="center"
                 android:textSize="35dp" />
 
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="departamento"
+                android:text="departamento: "
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
@@ -91,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="ciudad"
+                android:text="ciudad: "
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
@@ -177,6 +177,7 @@
                 android:textSize="20dp" />
 
             <Button
+                android:id="@+id/acepta"
                 android:layout_width="147dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"

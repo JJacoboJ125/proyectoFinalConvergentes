@@ -61,8 +61,6 @@ public class HomeFragmentDos extends Fragment {
             Intent intent = new Intent(requireContext(), ConfirmDetalleCargas.class);
             intent.putExtra("DOCUMENT_ID", codigo);
             startActivity(intent);
-
-            Toast.makeText(requireContext(), "Elemento seleccionado: " + codigo, Toast.LENGTH_SHORT).show();
         });
 
         return root;
